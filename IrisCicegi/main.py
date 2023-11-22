@@ -42,7 +42,7 @@ print(f"predicted {y_predict}")
 print(f"gerçek cevaplar {y_test}")
 conf = confusion_matrix(y_test, y_predict)
 print(conf)
-index = ["setos", "versicolor", "virginica"]
+index = ["setosa", "versicolor", "virginica"]
 hata_goster = pd.DataFrame(conf, index, index)
 print(hata_goster)
 plt.figure(figsize=(10, 6))
