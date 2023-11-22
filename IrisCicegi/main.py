@@ -39,7 +39,7 @@ model = DecisionTreeClassifier()
 model.fit(X_train, y_train)
 y_predict = model.predict(X_test)
 print(f"predicted {y_predict}")
-print(f"gerçek cevaplar {y_predict}")
+print(f"gerçek cevaplar {y_test}")
 conf = confusion_matrix(y_test, y_predict)
 print(conf)
 index = ["setos", "versicolor", "virginica"]
