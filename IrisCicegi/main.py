@@ -32,7 +32,10 @@ test   ---> 20 -- 30 -- 40
 X = iris.data
 Y = iris.target
 # 150 * 0.30 = 45 (test) 105 (train)
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X,
+                                                    Y,
+                                                    test_size=.3,
+                                                    random_state=42)
 # decision tree - karar ağaçlar
 model = DecisionTreeClassifier()
 
