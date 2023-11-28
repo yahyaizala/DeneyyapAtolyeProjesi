@@ -4,8 +4,11 @@ import numpy as np
 # -----  Veri Hazırlama ve yükleme -------#
 TRAINPATH = "database/mitbih_train.csv"
 TESTPATH = "database/mitbih_test.csv"
-Train = pd.read_csv(TRAINPATH, header=None)
-Test = pd.read_csv(TESTPATH, header=None)
+Train = pd.read_csv(TRAINPATH)
+Test = pd.read_csv(TESTPATH)
+# kaç adet kolon ve sütun var buradan görülebilir
+print(Train.head())
+
 X_train = np.array(Train)[:, :187]
 y_train = np.array(Train)[:, 187]
 
@@ -23,4 +26,3 @@ y_pred = nb.predict(X_test)  # test eder
 
 print(y_pred)
 print(y_test)
-
